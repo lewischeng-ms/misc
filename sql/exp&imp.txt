@@ -1,0 +1,3 @@
+expdp scott/tiger dumpfile=expdat01.dmp tables=emp,dept directory=dp_dir
+
+impdp '/ as sysdba' dumpfile=expdat01.dmp remap_schema=scott:sys remap_tablespace=users:tbs001 tables=emp,dept directory=dp_dir

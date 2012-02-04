@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/prompt"
+    android:textColor="@color/opaque_red"
+    android:textSize="@dimen/sixteen_sp"
+    />
+<EditText android:layout_height="wrap_content" android:id="@+id/txtUser" android:layout_width="match_parent">
+    <requestFocus></requestFocus>
+</EditText>
+<EditText android:layout_height="wrap_content" android:id="@+id/txtPwd" android:layout_width="match_parent" android:inputType="textPassword"></EditText>
+<Button android:text="Login" android:id="@+id/btnLogin" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Cancel" android:id="@+id/btnCancel" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<Button android:text="Read XML" android:id="@+id/btnXML" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<EditText android:layout_height="wrap_content" android:id="@+id/txtXml" android:layout_width="match_parent"></EditText>
+</LinearLayout>

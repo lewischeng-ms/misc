@@ -1,0 +1,37 @@
+%{
+/* Usage:
+	1. Code framework is as below.
+	2. yyin/yyout is the I/O stream.
+	3. input() indicate Lex to read a char and move next.
+	4. ECHO prints the yytext. */
+#include <stdio.h>
+int lineno = 1;
+%}
+
+digit [0-9]
+integer {digit}+
+end_of_line \n
+
+%%
+{end_of_line} {
+	ECHO;
+	printf("line %d\n", lineno++);
+}
+
+{integer} {
+	printf("an integer read: %s\n", yytext);
+}
+
+a[a-z]* { printf("word begins with 'a'\n", yytext); }
+
+%%
+int yywrap()
+{
+	return 1;
+}
+
+int main(int argc, char *argv[])
+{
+	yylex();
+	return 0;
+}

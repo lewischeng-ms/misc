@@ -1,0 +1,23 @@
+从oracle8到oracle10，JDBC目录下的驱动包都各有不同。看了一下oracle的文档说明，了解了一下它们的用途，相信大家有时候也很迷惑，写出来共享一下。
+
+这些是oracle10g下的驱动包的名称和它们的作用，其他版本的oracle基本类似。
+
+支持所有平台的JDBC Thin驱动
+
+classes12.jar (1,417,089 bytes) - JDK 1.2 和 JDK 1.3下使用
+
+classes12_g.jar (1,794,418 bytes) - 和classes12.jar相同, 但是包中的类使用"javac -g"命令编译，包含调试信息.
+
+classes12dms.jar (1,424,743 bytes) - 和classes12.jar相同, 但是包含一些附加的代码支持Oracle Dynamic Monitoring Service.
+
+classes12dms_g.jar (1,802,368 bytes) - 和 classes12dms.jar相同，但是包中的类使用"javac -g"编译，包含调试信息.
+
+ojdbc14.jar (1,352,918 bytes) - JDK 1.4下使用
+
+ojdbc14_g.jar (1,691,855 bytes) - 和ojdbc14.jar相同,但是包中的类使用"javac -g"编译，包含调试信息.
+
+ocrs12.jar (54,030 bytes) - 引入了javax.sql.rowset接口, 如CachedRowSet 和 WebRowSet. 可以在 JDK 1.2, 1.3, 和 1.4下使用.
+
+orai18n.jar (5,018,093 bytes) - 使用在JDK 1.2, 1.3 和 1.4下的NLS(National Language Support,国家语言支持)类.这个jar包替换了老的nls_charset jar/zip 文件.
+
+demo.tar (532,480 bytes) - 包含一些JDBC例程.

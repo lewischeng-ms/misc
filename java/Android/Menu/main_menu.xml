@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/file" android:title="File">
+        <menu>
+            <group android:checkableBehavior="none" android:id="@+id/nonegrp">
+                <item android:alphabeticShortcut="n" android:id="@+id/newitem" android:title="New"></item>
+                <item android:alphabeticShortcut="o" android:title="Open" android:id="@+id/openitem"></item>
+                <item android:alphabeticShortcut="s" android:title="Save" android:id="@+id/saveitem"></item>
+            </group>
+        </menu>
+    </item>
+    <item android:icon="@drawable/edit" android:title="Edit" android:id="@+id/edititem">
+        <menu>
+            <group android:checkableBehavior="single" android:id="@+id/singlegrp">
+                <item android:title="Cut" android:id="@+id/cutitem"></item>
+                <item android:title="Copy" android:id="@+id/copyitem"></item>
+                <item android:title="Paste" android:id="@+id/pasteitem"></item>
+            </group>
+        </menu>
+    </item>
+    <item android:icon="@drawable/help" android:title="Help">
+        <menu>
+            <group android:checkableBehavior="all" android:id="@+id/allgrp">
+                <item android:title="About" android:id="@+id/aboutitem"></item>
+                <item android:title="Exit" android:id="@+id/exititem"></item>
+            </group>
+        </menu>
+    </item>
+    
+</menu>

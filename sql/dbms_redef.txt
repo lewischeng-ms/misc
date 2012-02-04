@@ -1,0 +1,17 @@
+例如对myuser用户下表userbase执行表分区重建操作！
+
+1--验证是否可以执行
+SQL> execute dbms_redefinition.can_redef_table ('myuser','userbase');
+2--创建中间表
+按照需求创建一个新表userbase_a，其它_a表表结构已经建立。
+3--开始重定义
+SQL> execute dbms_redefinition.start_redef_table ('myuser','userbase','userbase_a');
+4--完成重定义
+SQL> execute dbms_redefinition.finish_redef_table ('myuser','userbase','userbase_a');
+
+在执行过程中还可以执行下面两条语句来保持源码与中转表数据统一.
+
+--保持同步表
+SQL> execute dbms_redefinition.sync_interim_table ('myuser','userbase','userbase_a');
+--终止重定义
+SQL> execute dbms_redefinition.abort_redef_table ('myuser','userbase','userbase_a');
