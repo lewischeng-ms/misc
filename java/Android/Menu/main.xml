@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    />
+<TableLayout android:layout_height="wrap_content" android:id="@+id/tableLayout1" android:layout_width="match_parent">
+    <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    	<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/hellomoto" android:id="@+id/imageView1"></ImageView>
+    	
+    </TableRow>
+    <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right">
+    <EditText android:id="@+id/editText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="abcdefg" android:gravity="right">
+    		<requestFocus></requestFocus>
+    	</EditText></TableRow>
+    <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/hello2" android:id="@+id/imageView2" android:layout_gravity="left"></ImageView>
+    </TableRow>
+    <TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content" android:layout_height="wrap_content"></TableRow>
+</TableLayout>
+</LinearLayout>

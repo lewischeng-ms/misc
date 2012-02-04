@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prompt">Please input username and password:</string>
+    <string name="app_name">HelloWorld</string>
+    <string name="login_ok">Login OK!</string>
+    <string name="login_fail">Login Failed</string>
+    <string name="username">lewis</string>
+    <string name="pwd">123</string>
+</resources>

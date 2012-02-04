@@ -1,0 +1,4 @@
+v$sort_segment：告诉我们temp表空间多少正用于sort
+v$sort_usage：哪些session正在使用temp表空间
+
+结合v$session和v$sql可以查到具体的会话和sql语句信息。

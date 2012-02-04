@@ -1,0 +1,1 @@
+select translate('1234Ãû×Ö4321', '1234Ãû×Ö', '1234') from dual;
