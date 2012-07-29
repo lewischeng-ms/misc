@@ -1,4 +1,4 @@
-javac-compiler
+misc
 ==============
 
-compiler for simplified java written in C
+for miscellaneous code pieces
