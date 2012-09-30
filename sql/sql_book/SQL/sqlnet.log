@@ -1,0 +1,19 @@
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleorcl)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=orcl)(CID=(PROGRAM=D:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=LEWIS-NOTEBOOK)(USER=Lewis))))
+
+  VERSION INFORMATION:
+	TNS for 64-bit Windows: Version 10.2.0.5.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 64-bit Windows: Version 10.2.0.5.0 - Production
+  Time: 28-9月 -2012 15:37:30
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS: 协议适配器错误
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: 协议适配器错误
+    nt secondary err code: 2
+    nt OS err code: 0

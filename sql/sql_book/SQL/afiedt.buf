@@ -1,0 +1,4 @@
+create table t001 (
+    x number(6,2)
+)
+/

@@ -1,0 +1,17 @@
+TTITLE 'Product Report'
+BTITLE 'Thanks for running the report'
+
+SET ECHO OFF
+SET VERIFY OFF
+SET PAGESIZE 30
+SET LINESIZE 70
+CLEAR COLUMNS
+COLUMN product_id HEADING ID FORMAT 99
+COLUMN name HEADING 'Product Name' FORMAT A20 WORD_WRAPPED
+COLUMN description HEADING Description FORMAT A30 WORD_WRAPPED
+COLUMN price HEADING Price FORMAT $99.99
+
+SELECT product_id, name, description, price
+FROM products;
+
+CLEAR COLUMNS
