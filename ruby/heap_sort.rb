@@ -1,3 +1,7 @@
+def swap(a, i, j)
+  a[i], a[j] = a[j], a[i]
+end
+
 def left_child(i)
   i * 2 + 1
 end
@@ -9,32 +13,34 @@ end
 def max_heapify(a, n, i)
   left = left_child(i)
   right = right_child(i)
+
   if left < n and a[left] > a[i]
     largest = left
   else
     largest = i
   end
+
   if right < n and a[right] > a[largest]
     largest = right
   end
+
   if largest != i
-    t = a[i]
-    a[i] = a[largest]
-    a[largest] = t
+    swap(a, largest, i)
     max_heapify(a, n, largest)
   end
 end
 
-def heap_sort!(a)
-  n = a.length
-  (n / 2 - 1).downto(0) do |i|
-    max_heapify(a, n, i)
+def build_max_heap!(a)
+  (a.length / 2 - 1).downto(0) do |i|
+    max_heapify(a, a.length, i)
   end
+end
 
-  (n - 1).downto(1) do |i|
-    t = a[i]
-    a[i] = a[0]
-    a[0] = t
+def heap_sort!(a)
+  build_max_heap!(a)
+
+  (a.length - 1).downto(1) do |i|
+    swap(a, 0, i)
     max_heapify(a, i, 0)
   end
   
