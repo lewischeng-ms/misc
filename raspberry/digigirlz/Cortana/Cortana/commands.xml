@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+    <CommandSet xml:lang="zh-cn" Name="Swith_zh-cn">
+        <AppName> 最帅的人 </AppName>
+        <Example> 给最帅的人来打开灯泡 </Example>
+
+        <Command Name="switch">
+            <Example> 给最帅的人来打开灯泡 </Example>
+            <ListenFor RequireAppName="ExplicitlySpecified"> 给 {builtin:AppName} 来 {status} 灯泡 </ListenFor>
+            <Feedback> 你最帅 </Feedback>
+            <Navigate Target="placeholder"/>
+        </Command>
+    
+        <PhraseList Label="status">
+            <Item>打开</Item>
+            <Item>关闭</Item>
+        </PhraseList>
+    </CommandSet>
+</VoiceCommands>
