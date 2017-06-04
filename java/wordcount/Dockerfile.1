@@ -1,0 +1,30 @@
+FROM openjdk:8-jdk
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    ssh rsync\
+  && rm -rf /var/lib/apt/lists/*
+
+RUN cd /root \
+  && wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.8.0/hadoop-2.8.0.tar.gz \
+  && tar zxvf hadoop-2.8.0.tar.gz \
+  && rm -f hadoop-2.8.0.tar.gz
+
+WORKDIR /root/hadoop-2.8.0
+
+COPY input ./input
+RUN bin/hdfs dfs -mkdir -p /user/lewis/input \
+  && bin/hdfs dfs -put ./input/* /user/lewis/input \
+  && bin/hdfs dfs -ls input \
+  && bin/hdfs dfs -cat input/file01 \
+  && bin/hdfs dfs -cat input/file02
+
+COPY WordCount.java ./
+
+ENV HADOOP_CLASSPATH $JAVA_HOME/lib/tools.jar
+
+RUN bin/hadoop com.sun.tools.javac.Main WordCount.java \
+  && jar cf wc.jar WordCount*.class
+
+CMD bin/hadoop jar wc.jar WordCount /user/lewis/input /user/lewis/output \
+  && bin/hdfs dfs -cat /user/lewis/output/part-r-00000
